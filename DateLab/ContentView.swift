@@ -85,19 +85,11 @@ struct ContentView: View {
         case "Date Operations":
             SessionDateOperations(viewModel: SessionDateOperationsViewModel())
         case "Timezone Explorer":
-            SessionTimezoneExplorer()
+            SessionTimezoneExplorer(viewModel: SessionTimezoneExplorerViewModel())
         case "Real Cases":
             Text("Real Cases")
         default:
             Text(session.title)
-        }
-    }
-}
-
-struct SessionTimezoneExplorer: View {
-    var body: some View {
-        VStack {
-            
         }
     }
 }
@@ -111,7 +103,5 @@ struct SessionRealCases: View {
 }
 
 #Preview {
-    //ContentView(viewModel: ContentViewViewModel())
-    //SessionDateFormatter(viewModel: SessionDateFormatterViewModel())
-    //SessionDateComponents()
+    ContentView(viewModel: ContentViewViewModel())
 }
